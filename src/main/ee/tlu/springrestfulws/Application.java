@@ -36,7 +36,7 @@ public class Application {
 		StudentRepository studentRepository = new StudentRepository(schoolRepository);
 		SchoolHandler schoolHandler = new SchoolHandler(schoolRepository);
 		StudentHandler studentHandler = new StudentHandler(studentRepository);
-
+	
 		RouterFunction<?> route = 
 			route(GET("/schools/{id}"), schoolHandler::getSchool)
 			.andRoute(GET("/schools"), schoolHandler::getAllSchools)
